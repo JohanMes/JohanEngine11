@@ -1,0 +1,6 @@
+EXPORTS
+    _Z7DllMainP11HINSTANCE__mPv @1
+    _ZN8RendererC1Ev @2
+    _ZN8RendererC2Ev @3
+    _ZN8RendererD1Ev @4
+    _ZN8RendererD2Ev @5
