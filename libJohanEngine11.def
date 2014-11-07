@@ -1,6 +1,27 @@
 EXPORTS
-    _Z7DllMainP11HINSTANCE__mPv @1
-    _ZN8RendererC1Ev @2
-    _ZN8RendererC2Ev @3
-    _ZN8RendererD1Ev @4
-    _ZN8RendererD2Ev @5
+    _ZN5Clock10GetTimeSecEv @1
+    _ZN5Clock5ResetEv @2
+    _ZN5Clock5StartEv @3
+    _ZN5ClockC1Eb @4
+    _ZN5ClockC2Eb @5
+    _ZN5ClockD1Ev @6
+    _ZN5ClockD2Ev @7
+    _ZN8Renderer11RenderFrameEv @8
+    _ZN8Renderer12CreateDeviceEv @9
+    _ZN8Renderer15CreateSwapChainEv @10
+    _ZN8Renderer15SetRenderTargetEiP22ID3D11RenderTargetViewP22ID3D11DepthStencilView @11
+    _ZN8Renderer22CreateRenderTargetViewEv @12
+    _ZN8Renderer25CreateDepthStencilSurfaceEv @13
+    _ZN8Renderer7GetHWNDEv @14
+    _ZN8Renderer7SetHWNDEP6HWND__ @15
+    _ZN8Renderer8OnResizeEv @16
+    _ZN8RendererC1EP6HWND__ @17
+    _ZN8RendererC2EP6HWND__ @18
+    _ZN8RendererD1Ev @19
+    _ZN8RendererD2Ev @20
+    _ZN9InterfaceC1EP6HWND__ @21
+    _ZN9InterfaceC2EP6HWND__ @22
+    _ZN9InterfaceD1Ev @23
+    _ZN9InterfaceD2Ev @24
+    interface @25 DATA
+    renderer @26 DATA

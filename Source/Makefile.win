@@ -1,17 +1,17 @@
 # Project: JohanEngine11
-# Makefile created by Dev-C++ 5.7.2
+# Makefile created by Dev-C++ 5.8.3
 
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
 RES      = obj/JohanEngine11_private.res
-OBJ      = obj/main.o obj/Renderer.o $(RES)
-LINKOBJ  = obj/main.o obj/Renderer.o $(RES)
+OBJ      = obj/main.o obj/Renderer.o obj/Resource.o obj/Clock.o obj/Interface.o $(RES)
+LINKOBJ  = obj/main.o obj/Renderer.o obj/Resource.o obj/Clock.o obj/Interface.o $(RES)
 LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc lib/x64/libd3d11.a
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.8.1/include/c++"
 BIN      = ../JohanEngine11.dll
-CXXFLAGS = $(CXXINCS) 
+CXXFLAGS = $(CXXINCS) -DBUILDING_DLL=1
 CFLAGS   = $(INCS) 
 RM       = rm.exe -f
 DEF      = ../libJohanEngine11.def
@@ -32,6 +32,15 @@ obj/main.o: main.cpp
 
 obj/Renderer.o: Renderer.cpp
 	$(CPP) -c Renderer.cpp -o obj/Renderer.o $(CXXFLAGS)
+
+obj/Resource.o: Resource.cpp
+	$(CPP) -c Resource.cpp -o obj/Resource.o $(CXXFLAGS)
+
+obj/Clock.o: Clock.cpp
+	$(CPP) -c Clock.cpp -o obj/Clock.o $(CXXFLAGS)
+
+obj/Interface.o: Interface.cpp
+	$(CPP) -c Interface.cpp -o obj/Interface.o $(CXXFLAGS)
 
 obj/JohanEngine11_private.res: JohanEngine11_private.rc 
 	$(WINDRES) -i JohanEngine11_private.rc --input-format=rc -o obj/JohanEngine11_private.res -O coff 
